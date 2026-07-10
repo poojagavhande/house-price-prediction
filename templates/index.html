@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+</html>
+<head>
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <img src="{{ url_for('static', filename='house.png') }}" alt="House Logo" width="90">
+    
+    <h1>🤖🏠House Price Prediction</h1>
+
+    <form action="/predict" method="POST">
+
+        <label>📐Area (sq ft)</label>
+        <input type="number" name="area" placeholder="Area (sq ft)" required><br><br>
+
+        <label>🛏️ Bedrooms</label>
+        <input type="number" name="bedrooms" placeholder="Bedrooms" required><br><br>
+
+        <label>🏡 House Age (Years) </label>
+        <input type="number" name="age" placeholder="House Age" required><br><br>
+
+        <button type="submit">Predict Price</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <h2 style="color:#2e7d32; margin-top:20px;">
+        {{ prediction_text }}
+    </h2>
+    <p>Developed by Pooja Gavhande❤️
+
+    </p>
+    
+
+</div>
+ 
+     
+
+</body>
+</html>

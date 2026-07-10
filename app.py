@@ -17,7 +17,7 @@ def predict():
     bedrooms =float(request.form["bedrooms"])
     age = float(request.form["age"])
 
-    prediction = model.predict([[area, bedrooms, age]])
+    prediction = model.predict([[area, bedrooms, age]])[0]
 
     return render_template(
         "index.html",
